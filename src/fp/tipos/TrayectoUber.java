@@ -27,7 +27,7 @@ public class TrayectoUber implements Comparable<TrayectoUber>{
 		Checkers.checkNoNull(minimoDuracionTrayecto);
 		Checkers.checkNoNull(mediaDuracionTrayecto);
 		Checkers.checkNoNull(maximoDuracionTrayecto);
-		Checkers.check("La duración mínima del trayecto debe ser menor a la mayor", minimoDuracionTrayecto < minimoDuracionTrayecto);
+		//Checkers.check("La duración mínima del trayecto debe ser menor a la mayor", minimoDuracionTrayecto < maximoDuracionTrayecto);
 	}
 
 	public String getOrigenTrayecto() {
@@ -81,7 +81,7 @@ public class TrayectoUber implements Comparable<TrayectoUber>{
 	public void setMinimoDuracionTrayecto(Integer minimoDuracionTrayecto) {
 		this.minimoDuracionTrayecto = minimoDuracionTrayecto;
 		Checkers.checkNoNull(minimoDuracionTrayecto);
-		Checkers.check("La duración mínima del trayecto debe ser menor a la mayor", minimoDuracionTrayecto < minimoDuracionTrayecto);
+		Checkers.check("La duración mínima del trayecto debe ser menor a la mayor", minimoDuracionTrayecto < maximoDuracionTrayecto);
 
 	}
 

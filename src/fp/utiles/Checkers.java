@@ -1,7 +1,5 @@
 package fp.utiles;
 
-//TEST GIT
-
 public class Checkers {
 	public static void check(String texto, Boolean condicion) {
 		if(!condicion) {
