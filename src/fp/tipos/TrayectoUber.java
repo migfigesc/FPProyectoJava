@@ -3,6 +3,8 @@ package fp.tipos;
 import java.time.Duration;
 import java.time.LocalDate;
 
+import fp.utiles.Checkers;
+
 public class TrayectoUber {
 	private String origenTrayecto, destinoTrayecto;
 	private LocalDate diaMayorRecaudacion;
@@ -22,6 +24,10 @@ public class TrayectoUber {
 		this.minimoDuracionTrayecto = minimoDuracionTrayecto;
 		this.cocheMasUsado = cocheMasUsado;
 		this.pagoEfectivo = pagoEfectivo;
+		Checkers.checkNoNull(minimoDuracionTrayecto);
+		Checkers.checkNoNull(mediaDuracionTrayecto);
+		Checkers.checkNoNull(maximoDuracionTrayecto);
+		Checkers.check("La duración mínima del trayecto debe ser menor a la mayor", minimoDuracionTrayecto < minimoDuracionTrayecto);
 	}
 
 	public String getOrigenTrayecto() {
@@ -54,6 +60,8 @@ public class TrayectoUber {
 
 	public void setMediaDuracionTrayecto(Integer mediaDuracionTrayecto) {
 		this.mediaDuracionTrayecto = mediaDuracionTrayecto;
+		Checkers.checkNoNull(mediaDuracionTrayecto);
+
 	}
 
 	public Integer getMaximoDuracionTrayecto() {
@@ -62,6 +70,8 @@ public class TrayectoUber {
 
 	public void setMaximoDuracionTrayecto(Integer maximoDuracionTrayecto) {
 		this.maximoDuracionTrayecto = maximoDuracionTrayecto;
+		Checkers.checkNoNull(maximoDuracionTrayecto);
+
 	}
 
 	public Integer getMinimoDuracionTrayecto() {
@@ -70,6 +80,9 @@ public class TrayectoUber {
 
 	public void setMinimoDuracionTrayecto(Integer minimoDuracionTrayecto) {
 		this.minimoDuracionTrayecto = minimoDuracionTrayecto;
+		Checkers.checkNoNull(minimoDuracionTrayecto);
+		Checkers.check("La duración mínima del trayecto debe ser menor a la mayor", minimoDuracionTrayecto < minimoDuracionTrayecto);
+
 	}
 
 	public ModeloCoche getCocheMasUsado() {
