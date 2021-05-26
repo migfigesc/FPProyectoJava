@@ -1,20 +1,19 @@
 package fp.tipos;
 
-import java.time.Duration;
 import java.time.LocalDate;
 
 import fp.utiles.Checkers;
 
-public class TrayectoUber implements Comparable<TrayectoUber>{
+public class Trayecto implements Comparable<Trayecto>{
 	private String origenTrayecto, destinoTrayecto;
 	private LocalDate diaMayorRecaudacion;
 	private Integer mediaDuracionTrayecto, maximoDuracionTrayecto, minimoDuracionTrayecto;
 	private ModeloCoche cocheMasUsado;
 	private Boolean pagoEfectivo;
 
-	public TrayectoUber(String origenTrayecto, String destinoTrayecto, LocalDate diaMayorRecaudacion,
-			Integer mediaDuracionTrayecto, Integer maximoDuracionTrayecto, Integer minimoDuracionTrayecto,
-			ModeloCoche cocheMasUsado, Boolean pagoEfectivo) {
+	public Trayecto(String origenTrayecto, String destinoTrayecto, LocalDate diaMayorRecaudacion,
+					Integer mediaDuracionTrayecto, Integer maximoDuracionTrayecto, Integer minimoDuracionTrayecto,
+					ModeloCoche cocheMasUsado, Boolean pagoEfectivo) {
 		super();
 		this.origenTrayecto = origenTrayecto;
 		this.destinoTrayecto = destinoTrayecto;
@@ -126,7 +125,7 @@ public class TrayectoUber implements Comparable<TrayectoUber>{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TrayectoUber other = (TrayectoUber) obj;
+		Trayecto other = (Trayecto) obj;
 		if (destinoTrayecto == null) {
 			if (other.destinoTrayecto != null)
 				return false;
@@ -141,7 +140,7 @@ public class TrayectoUber implements Comparable<TrayectoUber>{
 	}
 
 	@Override
-	public int compareTo(TrayectoUber o) {
+	public int compareTo(Trayecto o) {
 		int res = this.getOrigenTrayecto().compareTo(o.getOrigenTrayecto());
 		if (res == 0) {
 			res = this.getDestinoTrayecto().compareTo(o.getDestinoTrayecto());

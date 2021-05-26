@@ -1,7 +1,7 @@
 package fp.tipos.test;
 
 import fp.tipos.ModeloCoche;
-import fp.tipos.TrayectoUber;
+import fp.tipos.Trayecto;
 
 import java.time.LocalDate;
 
@@ -16,7 +16,7 @@ public class TestTrayectoUber {
 			System.out.println("\nTEST DEL CONSTRUCTOR");
 			try {
 
-				TrayectoUber trayecto1 = new TrayectoUber("Puerta Jerez", "Apeadero San Bernardo",
+				Trayecto trayecto1 = new Trayecto("Puerta Jerez", "Apeadero San Bernardo",
 						LocalDate.of(2021, 04, 23), 340,
 				220, 600, ModeloCoche.PEUGEOT_308, true);
 				System.out.println("TrayectoUber:" + trayecto1);

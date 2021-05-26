@@ -1,7 +1,6 @@
 package fp.tipos;
 
 
-import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ public class FactoriaTrayectos {
 	
 	public static Datos leerTrayectos(String mensajeError, String ruta) {
 		List<String> datos = Ficheros.leeFichero(mensajeError, ruta);
-		List<TrayectoUber> lista = new ArrayList<TrayectoUber>();
+		List<Trayecto> lista = new ArrayList<Trayecto>();
 		for(String s : datos) {
 			lista.add(parseaTrayecto(s));
 		}
@@ -22,7 +21,7 @@ public class FactoriaTrayectos {
 		return d;
 	}
 	
-	public static TrayectoUber parseaTrayecto(String s) {
+	public static Trayecto parseaTrayecto(String s) {
 		String [] trozos = s.split(";");
 		Checkers.check("La cadena está mal formada", trozos.length==8);
 		String origenTrayecto = trozos[0].trim();
@@ -33,7 +32,7 @@ public class FactoriaTrayectos {
 		Integer minimoDuracionTrayecto = Integer.valueOf(trozos[5].trim());
 		ModeloCoche cocheMasUsado = ModeloCoche.valueOf(trozos[6].trim());
 		Boolean pagoEfectivo = Boolean.parseBoolean(trozos[7].trim());
-		return new TrayectoUber(origenTrayecto, destinoTrayecto, diaMayorRecaudacion, mediaDuracionTrayecto, maximoDuracionTrayecto, minimoDuracionTrayecto, cocheMasUsado, pagoEfectivo);
+		return new Trayecto(origenTrayecto, destinoTrayecto, diaMayorRecaudacion, mediaDuracionTrayecto, maximoDuracionTrayecto, minimoDuracionTrayecto, cocheMasUsado, pagoEfectivo);
 
 	}
 

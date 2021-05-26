@@ -1,15 +1,7 @@
 package fp.tipos.test;
 
-import java.time.Duration;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
 import fp.tipos.Datos;
 import fp.tipos.FactoriaTrayectos;
-import fp.tipos.ModeloCoche;
-import fp.tipos.TrayectoUber;
-import fp.utiles.Ficheros;
 
 public class TestDatos {
 

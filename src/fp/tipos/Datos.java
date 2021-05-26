@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Datos {
-	private List<TrayectoUber> trayectos;
+	private List<Trayecto> trayectos;
 
 	public Datos() {
 		super();
-		trayectos = new ArrayList<TrayectoUber>();
+		trayectos = new ArrayList<Trayecto>();
 	}
 
-	public Datos(List<TrayectoUber> trayectos) {
+	public Datos(List<Trayecto> trayectos) {
 		super();
 		this.trayectos = trayectos;
 	}
@@ -20,13 +20,13 @@ public class Datos {
 		return "Datos [trayectos=" + trayectos + "]";
 	}
 	
-	public void añadeTrayecto(TrayectoUber t) {
+	public void añadeTrayecto(Trayecto t) {
 		if(t != null) {
 			trayectos.add(t);
 		}
 	}
 	
-	public void eliminaTrayecto(TrayectoUber t) {
+	public void eliminaTrayecto(Trayecto t) {
 		if(!trayectos.contains(t)) {
 			throw new IllegalArgumentException("El trayecto no está registrado en los datos");
 		}
