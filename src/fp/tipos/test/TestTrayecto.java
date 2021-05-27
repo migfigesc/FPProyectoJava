@@ -5,7 +5,7 @@ import fp.tipos.Trayecto;
 
 import java.time.LocalDate;
 
-public class TestTrayectoUber {
+public class TestTrayecto {
 	
 	public static void main(String[] args) {
 		testConstructor();
