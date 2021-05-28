@@ -1,7 +1,6 @@
 package fp.tipos;
 
 import java.time.LocalDate;
-
 import fp.utiles.Checkers;
 
 public class Trayecto implements Comparable<Trayecto>{

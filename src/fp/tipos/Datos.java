@@ -33,4 +33,8 @@ public class Datos {
 		trayectos.remove(t);
 	}
 
+	public Integer getNumTrayectos() {
+		return trayectos.size();
+	}
+
 }
