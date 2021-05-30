@@ -6,7 +6,7 @@ import fp.tipos.Datos;
 public class TestFactoriaDatos {
 
     private static final Datos DATOS = FactoriaTrayectos.leerTrayectos("Datos no leídos" +
-            "correctamente", "/data/dataset_EDITADO.csv");
+            "correctamente", "data/dataset_EDITADO.csv");
 
     public static void main(String[] args) {
         testCreacionDatos();
@@ -15,10 +15,11 @@ public class TestFactoriaDatos {
     }
 
     private static void testCreacionDatos() {
-        System.out.println("\nTEST CREACION DE DATOS:");
-            Datos datos = FactoriaTrayectos.leerTrayectos("Datos no leídos correctamente",
-                    "data/dataset_EDITADO.csv");
-            System.out.println("Datos leídos" + datos);
+        System.out.println("\nTest creación de datos:");
+        try {
+            System.out.println("Leídos: " + DATOS.getNumTrayectos() + " trayectos");
+        } catch (Exception e) {
+            System.out.println("Excepción capturada: \n " + e);
         }
     }
 
