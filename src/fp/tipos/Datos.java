@@ -37,4 +37,14 @@ public class Datos {
 		return trayectos.size();
 	}
 
+	public Boolean existeTrayectoDestino(String destino){
+		return trayectos.stream()
+				.anyMatch(x -> x.getDestinoTrayecto().equals(destino));
+	}
+
+	public Long getNumeroTrayectoModeloCoche(ModeloCoche modelo) {
+		return trayectos.stream()
+				.filter(x -> x.getCocheMasUsado().equals(modelo)).count();
+	}
+
 }
