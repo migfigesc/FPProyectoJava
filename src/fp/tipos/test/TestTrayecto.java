@@ -10,6 +10,7 @@ public class TestTrayecto {
 	public static void main(String[] args) {
 		testConstructor();
 
+
 	}
 
 		private static void testConstructor () {
@@ -20,6 +21,7 @@ public class TestTrayecto {
 						LocalDate.of(2021, 04, 23), 340,
 				220, 600, ModeloCoche.PEUGEOT_308, true);
 				System.out.println("TrayectoUber:" + trayecto1);
+				System.out.println("Destino del trayecto: " + trayecto1.getDestinoTrayecto());
 
 			} catch(Exception e) {
 				System.out.println("No se ha podido cargar el trayecto" + e);

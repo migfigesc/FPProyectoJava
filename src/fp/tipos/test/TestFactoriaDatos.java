@@ -22,9 +22,9 @@ public class TestFactoriaDatos {
 //        testGetNumeroTrayectoModeloCoche();
 //        testGetModeloCochesTrayectos();
 //        testGetTrayectoMayorDuracionMedia();
-          testCambiaPagoEfectivoDestino();
+//        testCambiaPagoEfectivoDestino();
 //        testGetTrayectosPorModeloCoche();
-//        testGetTrayectosEnFechasPorCoche();
+          testGetTrayectosEnFechasPorCoche();
 //        testGetModeloCocheMasUtilizado();
 //        testGetNumeroTrayectosPagoEfectivo();
 //        testGetNumeroTrayectosPagoTarjeta();
