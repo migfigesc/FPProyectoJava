@@ -24,7 +24,7 @@ public class TestFactoriaDatos {
 //        testGetTrayectoMayorDuracionMedia();
 //        testCambiaPagoEfectivoDestino();
 //        testGetTrayectosPorModeloCoche();
-          testGetTrayectosEnFechasPorCoche();
+//        testGetTrayectosEnFechasPorCoche();
 //        testGetModeloCocheMasUtilizado();
 //        testGetNumeroTrayectosPagoEfectivo();
 //        testGetNumeroTrayectosPagoTarjeta();
