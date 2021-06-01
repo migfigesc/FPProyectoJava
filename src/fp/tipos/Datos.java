@@ -38,6 +38,16 @@ public class Datos {
 		return trayectos.size();
 	}
 
+	public long getNumeroTrayectosPagoEfectivo() {
+		return trayectos.stream()
+				.filter(x->x.getPagoEfectivo().equals(Boolean.TRUE))
+				.count();
+	}
+
+	public long getNumeroTrayectosPagoTarjeta() {
+		return getNumTrayectos() - getNumeroTrayectosPagoEfectivo();
+	}
+
 	public Boolean existeTrayectoDestino(String destino){
 		return trayectos.stream()
 				.anyMatch(x -> x.getDestinoTrayecto().equals(destino));
@@ -53,8 +63,6 @@ public class Datos {
 				.map(Trayecto::getCocheMasUsado)
 				.collect(Collectors.toSet());
 	}
-
-	//map y sus variantes mapToInt, mapToLong y mapToDouble. (Function) + distinct, limit
 
 	public Trayecto getTrayectoMayorDuracionMedia() {
 		Comparator<Trayecto> cmp = Comparator.comparing(Trayecto::getMediaDuracionTrayecto);

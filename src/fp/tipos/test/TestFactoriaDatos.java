@@ -17,14 +17,17 @@ public class TestFactoriaDatos {
             "correctamente", "data/dataset_EDITADO.csv");
 
     public static void main(String[] args) {
-        //testCreacionDatos();
-        //testExisteTrayectoDestino();
-        //testGetNumeroTrayectoModeloCoche();
-        //testGetModeloCochesTrayectos();
-        //testGetTrayectoMayorDuracionMedia();
-        //testGetTrayectosPorModeloCoche();
-        //testGetTrayectosEnFechasPorCoche();
-        testGetModeloCocheMasUtilizado();
+//        testCreacionDatos();
+//        testExisteTrayectoDestino();
+//        testGetNumeroTrayectoModeloCoche();
+//        testGetModeloCochesTrayectos();
+//        testGetTrayectoMayorDuracionMedia();
+          testCambiaPagoEfectivoDestino();
+//        testGetTrayectosPorModeloCoche();
+//        testGetTrayectosEnFechasPorCoche();
+//        testGetModeloCocheMasUtilizado();
+//        testGetNumeroTrayectosPagoEfectivo();
+//        testGetNumeroTrayectosPagoTarjeta();
 
     }
 
@@ -96,6 +99,20 @@ public class TestFactoriaDatos {
 
     }
 
+    public static void testCambiaPagoEfectivoDestino() {
+        System.out.println("\nTest de cambiaPagoEfectivoDestino:");
+        String destinoParaCambiar = "0 Rue des Lombards, Paris";
+        try {
+            System.out.println("Número de pagos con tarjeta antes de la operación: " + DATOS.getNumeroTrayectosPagoTarjeta());
+            System.out.println("Número de pagos en efectivo antes de la operación: " + DATOS.getNumeroTrayectosPagoEfectivo());
+            DATOS.cambiaPagoEfectivoDestino(destinoParaCambiar,Boolean.TRUE,  Boolean.FALSE);
+            System.out.println("Número de pagos con tarjeta después de la operación: " + DATOS.getNumeroTrayectosPagoTarjeta());
+            System.out.println("Número de pagos en efectivo después de la operación: " + DATOS.getNumeroTrayectosPagoEfectivo());
+        } catch (Exception e) {
+            System.out.println("Excepción capturada\n" + e);
+        }
+    }
+
     private static void testGetTrayectosPorModeloCoche() {
         System.out.println("\nTest de getTrayectosPorModeloCoche");
         try {
@@ -127,6 +144,16 @@ public class TestFactoriaDatos {
         } catch (Exception e) {
             System.out.println("Excepción capturada:\n" + e);
         }
+    }
+
+    private static void testGetNumeroTrayectosPagoEfectivo() {
+        System.out.println("\nTest de getNumeroTrayectosPagoEfectivo");
+        System.out.print("Número de trayectos con pago en efectivo: " + DATOS.getNumeroTrayectosPagoEfectivo()+"\n");
+    }
+
+    private static void testGetNumeroTrayectosPagoTarjeta() {
+        System.out.println("\nTest de getNumeroTrayectosPagoTarjeta");
+        System.out.print("Número de trayectos con pago con tarjeta: " + DATOS.getNumeroTrayectosPagoTarjeta() +"\n");
     }
 }
 
