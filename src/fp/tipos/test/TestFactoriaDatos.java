@@ -1,8 +1,15 @@
 package fp.tipos.test;
 
-import fp.tipos.FactoriaTrayectos;
 import fp.tipos.Datos;
+import fp.tipos.FactoriaTrayectos;
 import fp.tipos.ModeloCoche;
+import fp.tipos.Trayecto;
+
+import java.time.LocalDate;
+
+
+import java.time.LocalDate;
+import java.util.SortedSet;
 
 public class TestFactoriaDatos {
 
@@ -15,7 +22,9 @@ public class TestFactoriaDatos {
         //testGetNumeroTrayectoModeloCoche();
         //testGetModeloCochesTrayectos();
         //testGetTrayectoMayorDuracionMedia();
-        testGetTrayectosPorModeloCoche();
+        //testGetTrayectosPorModeloCoche();
+        //testGetTrayectosEnFechasPorCoche();
+        testGetModeloCocheMasUtilizado();
 
     }
 
@@ -95,6 +104,29 @@ public class TestFactoriaDatos {
             System.out.println("Excepción capturada\n" + e);
         }
 
+    }
+
+    private static void testGetTrayectosEnFechasPorCoche() {
+        System.out.println("\nTest de getTrayectosEnFechasPorCoche");
+        LocalDate fecha1 = LocalDate.of(2016,01,01);
+        LocalDate fecha2 = LocalDate.of(2016, 05, 01);
+        try {
+            System.out.println(" Fechas: " + fecha1 + ", " + fecha2);
+            SortedSet<Trayecto> tray = DATOS.getTrayectosEnFechasPorCoche(fecha1, fecha2);
+            System.out.println(tray);
+        } catch (Exception e) {
+            System.out.println("Excepción capturada\n" + e);
+        }
+    }
+
+    private static void testGetModeloCocheMasUtilizado() {
+        System.out.println("\nTest de getModeloCocheMasUtilizado:");
+        try {
+            ModeloCoche mod = DATOS.getModeloCocheMasUtilizado();
+            System.out.println("El modelo de coche más usado ha sido: " + mod);
+        } catch (Exception e) {
+            System.out.println("Excepción capturada:\n" + e);
+        }
     }
 }
 
