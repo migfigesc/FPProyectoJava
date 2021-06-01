@@ -17,7 +17,7 @@ public class TestFactoriaDatos {
             "correctamente", "data/dataset_EDITADO.csv");
 
     public static void main(String[] args) {
-//        testCreacionDatos();
+        testCreacionDatos();
 //        testExisteTrayectoDestino();
 //        testGetNumeroTrayectoModeloCoche();
 //        testGetModeloCochesTrayectos();

@@ -53,7 +53,7 @@ public class Trayecto implements Comparable<Trayecto>{
 	}
 
 	public Integer getMediaDuracionTrayecto() {
-		return mediaDuracionTrayecto/60;
+		return mediaDuracionTrayecto;
 	}
 
 	public void setMediaDuracionTrayecto(Integer mediaDuracionTrayecto) {
@@ -63,7 +63,7 @@ public class Trayecto implements Comparable<Trayecto>{
 	}
 
 	public Integer getMaximoDuracionTrayecto() {
-		return maximoDuracionTrayecto/60;
+		return maximoDuracionTrayecto;
 	}
 
 	public void setMaximoDuracionTrayecto(Integer maximoDuracionTrayecto) {
@@ -73,7 +73,7 @@ public class Trayecto implements Comparable<Trayecto>{
 	}
 
 	public Integer getMinimoDuracionTrayecto() {
-		return minimoDuracionTrayecto/60;
+		return minimoDuracionTrayecto;
 	}
 
 	public void setMinimoDuracionTrayecto(Integer minimoDuracionTrayecto) {
